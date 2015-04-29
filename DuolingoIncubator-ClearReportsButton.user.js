@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Duolingo Incubator - Clear Reports Button
-// @version      0.4
+// @version      0.5
 // @description  Click once to delete all reports of one source sentence! :D
 // @author       sommerlied
 // @match http://incubator.duolingo.com/*
@@ -62,12 +62,11 @@ function setupObserver(functionToBeExecuted){
 // (because when one is looking at the whole skill tree, there is no exercise editor to be observed)
 function checkFullscreenMutations(mutations){
     mutations.forEach(function(mutation) {
-        alert("fullscreen mutation");
         if(mutation.target.style.getPropertyValue('display') == 'none'){
-            alert("editor disconnect");
+            //alert("editor disconnect");
             editorObserver.disconnect();
         }else{ // connect
-            alert("editor connect");
+            //alert("editor connect");
             observeEditor();
         }
     })
@@ -77,7 +76,7 @@ function checkFullscreenMutations(mutations){
 // eg. one mutation = loading reports on the right side of the editor when clicking on a sentence
 function checkEditorMutations(mutations) {
     mutations.forEach(function(mutation) {
-        alert("editor mutation");
+        //alert("editor mutation");
         addSections();
     })
 }
