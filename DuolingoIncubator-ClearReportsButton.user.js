@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name         Duolingo Incubator - Clear Reports Button
-// @version      0.5
+// @version      0.6
 // @description  Click once to delete all reports of one source sentence! :D
 // @author       sommerlied
-// @match http://incubator.duolingo.com/*
-// @include http://incubator.duolingo.com/*
+// @match https://incubator.duolingo.com/courses/*
+// @include https://incubator.duolingo.com/courses/*
 // ==/UserScript==
 
 var clearReportsSectionId = 'clear-reports-section-';
@@ -160,6 +160,7 @@ function clickButtons(section, buttonClass){
         rejectButtons[i].click();
     }
 }
+
 
 
 
